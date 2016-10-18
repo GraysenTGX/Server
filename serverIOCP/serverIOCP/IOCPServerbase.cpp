@@ -2,11 +2,20 @@
 #include "IOCPServerbase.h"
 
 
-CIOCPServerbase::CIOCPServerbase(void)
-{
-}
+namespace tmtgx{
+
+	CIOCPServerbase::CIOCPServerbase(void)
+	{
+		IOCPort = NULL;
+		m_AcceptEXAddress = NULL;
+		WorkerThreadHandle = NULL;
+	}
 
 
-CIOCPServerbase::~CIOCPServerbase(void)
-{
+	CIOCPServerbase::~CIOCPServerbase(void)
+	{
+	}
+
+	CIOCP
+
 }
