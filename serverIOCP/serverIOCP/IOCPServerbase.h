@@ -1,10 +1,12 @@
-#pragma once
+#ifndef _IOCPSERVER_BASE_H_
+#define	_IOCPSERVER_BASE_H_
 
 #include <WinSock2.h>
 #include <string.h>
 #include <MSWSock.h>  //for acceptex
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
+#include <boost/shared_ptr.hpp>
 
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "Mswsock.lib")
@@ -46,10 +48,9 @@ namespace tmtgx{
 		virtual						~CIOCPServerbase(void);
 
 	public:
-		void						Initialize();
-		void						UnInitilize();
-		bool						Start();
-		bool						Stop();
+		bool						Initialize();
+		void						UnInitilize();		
+		DWORD						GetCPUNum();
 		BOOL						CreateNewCompletionPort(DWORD WorkThreadNum);
 		BOOL						Associate2CompletionHandle(HANDLE &completionPort, HANDLE &newDevice, DWORD &hCmpletionKey);
 		HANDLE						CreateNewClientSocketHandle();
@@ -67,12 +68,10 @@ namespace tmtgx{
 
 	private:
 		BOOL						ListenSocketInit(std::string ip, unsigned short listenPort);
-		BOOL						CreateWorkerThreads();
 		BOOL						GetAcceptEXFuncAddress();
 		void						WorkerThreadFunc(boost::thread::id id);
 		Per_Socket_Handle_Data*		CreateNewHandle4Socket();
 		Per_IO_Data*				CreateNewIOData();
-		DWORD						GetCPUNum();
 		BOOL						SocketEnvInitialize();
 
 	
@@ -82,8 +81,8 @@ namespace tmtgx{
 		bool						m_is_inited;
 		SOCKET						m_ListenSocket;
 		LPFN_ACCEPTEX				m_AcceptEXAddress;
-		boost::thread*				m_WorkerThreadHandle;
 
 	};
 
 }
+#endif;

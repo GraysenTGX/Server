@@ -85,16 +85,19 @@ namespace tmtgx{
 		return true;
 	}
 
-	BOOL CIOCPServerbase::CreateWorkerThreads()
+
+	bool CIOCPServerbase::Initialize()
 	{
-		m_WorkerThreadHandle = new(std::nothrow) boost::thread[m_CPUnum*2]; //worker thread is larger than cpu num
-		if(!m_WorkerThreadHandle)
-			return false;
-		for(int i = 0; i < 2*threadnum; i++){
-			m_WorkerThreadHandle[i] = boost::thread(boost::bind(&tmtgx::CIOCPServerbase::WorkerThreadFunc, this, m_WorkerThreadHandle[i].get_id()));
-			m_WorkerThreadHandle[i].join();
+		//init socket work environment
+		if(SocketEnvInitialize())
+		{
+			//add log for init sucess
+			return true;
 		}
-		return true;
+		else
+		{
+			return false;
+		}
 	}
 
 	void CIOCPServerbase::WorkerThreadFunc(boost::thread::id id)
