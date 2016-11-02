@@ -7,9 +7,9 @@ namespace tmtgx{
 
 	CIOCPServerbase::CIOCPServerbase(void)
 	{
+		m_is_inited = false;
 		m_IOCPort = NULL;
 		m_AcceptEXAddress = NULL;
-		m_WorkerThreadHandle = NULL;
 	}
 
 
@@ -17,13 +17,6 @@ namespace tmtgx{
 	{
 	}
 
-	DWORD CIOCPServerbase::GetCPUNum()
-	{
-		_SYSTEM_INFO sys_info;
-		::GetSystemInfo(&sys_info);
-		m_CPUnum = sys_info.dwNumberOfProcessors;
-		return m_CPUnum;
-	}
 
 	BOOL CIOCPServerbase::SocketEnvInitialize()
 	{
@@ -92,17 +85,13 @@ namespace tmtgx{
 		if(SocketEnvInitialize())
 		{
 			//add log for init sucess
+			m_is_inited = true;
 			return true;
 		}
 		else
 		{
 			return false;
 		}
-	}
-
-	void CIOCPServerbase::WorkerThreadFunc(boost::thread::id id)
-	{
-		
 	}
 
 	void CIOCPServerbase::RecvDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data,_PER_IO_DATA &per_io_data)
@@ -112,6 +101,11 @@ namespace tmtgx{
 
 	void CIOCPServerbase::SendDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data,_PER_IO_DATA &per_io_data)
 	{
+	}
+
+	void CIOCPServerbase::UnInitilize()
+	{
+		WSACleanup();
 	}
 
 }

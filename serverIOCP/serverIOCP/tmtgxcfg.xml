@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<p>
+<tmtgx>
+  <serverconfig>
   <!--num of accept event to set-->
-  <acceptnum>10</acceptnum>
-  </p>
+    <acceptnum>10</acceptnum>
+    <stordatabyredis>true</stordatabyredis>
+  </serverconfig>
+  
+  <log>
+    <enable>1</enable>
+  </log>
+</tmtgx>

@@ -14,7 +14,8 @@ namespace tmtgx {
 
 	public:
 		void	LongTimeWorker();
-
+		void	RecvDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data, _PER_IO_DATA &per_io_data);
+		void	SendDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data, _PER_IO_DATA &per_io_data);
 	};
 
 }

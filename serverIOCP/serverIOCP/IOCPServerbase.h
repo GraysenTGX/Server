@@ -50,7 +50,6 @@ namespace tmtgx{
 	public:
 		bool						Initialize();
 		void						UnInitilize();		
-		DWORD						GetCPUNum();
 		BOOL						CreateNewCompletionPort(DWORD WorkThreadNum);
 		BOOL						Associate2CompletionHandle(HANDLE &completionPort, HANDLE &newDevice, DWORD &hCmpletionKey);
 		HANDLE						CreateNewClientSocketHandle();
@@ -69,18 +68,17 @@ namespace tmtgx{
 	private:
 		BOOL						ListenSocketInit(std::string ip, unsigned short listenPort);
 		BOOL						GetAcceptEXFuncAddress();
-		void						WorkerThreadFunc(boost::thread::id id);
 		Per_Socket_Handle_Data*		CreateNewHandle4Socket();
 		Per_IO_Data*				CreateNewIOData();
 		BOOL						SocketEnvInitialize();
 
-	
+	protected:
+		LPFN_ACCEPTEX				m_AcceptEXAddress;
+
 	private:
 		HANDLE						m_IOCPort;
-		DWORD						m_CPUnum;
 		bool						m_is_inited;
 		SOCKET						m_ListenSocket;
-		LPFN_ACCEPTEX				m_AcceptEXAddress;
 
 	};
 
