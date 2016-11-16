@@ -41,6 +41,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Boost\include;G:\VS2012\boost_1_61_0\boost_1_61_0;G:\VS2012\boost_1_61_0\boost_1_61_0\boost;G:\VS2012\boost_lib_vs2012_1.57\x64;G:\VS2012\boost_1_61_0\boost_1_61_0\libs;$(IncludePath)$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+    <ReferencePath>G:\VS2012\boost_lib_vs2012_1.57\x64;G:\VS2012\boost_1_61_0\boost_1_61_0\libs;$(ReferencePath)$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+    <LibraryPath>C:\Boost\lib;G:\VS2012\boost_1_61_0\boost_1_61_0\stage\lib;G:\VS2012\boost_lib_vs2012_1.57\x64;G:\VS2012\boost_1_61_0\boost_1_61_0\libs;$(LibraryPath)$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x86);</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -79,17 +82,24 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="IOCPServer.h" />
     <ClInclude Include="IOCPServerbase.h" />
+    <ClInclude Include="IOCPServerManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IOCPServer.cpp" />
     <ClCompile Include="IOCPServerbase.cpp" />
+    <ClCompile Include="IOCPServerManager.cpp" />
     <ClCompile Include="serverIOCP.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="tmtgxcfg.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

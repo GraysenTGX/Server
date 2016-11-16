@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tmtgx>
+  
   <serverconfig>
-  <!--num of accept event to set-->
-    <acceptnum>10</acceptnum>
-    <stordatabyredis>true</stordatabyredis>
+    <TCP>1</TCP>                          <!--use tcp mode for transfer traffic-->
+    <UDP>0</UDP>                          <!--use udp mode for transfer traffix-->
+    <acceptnum>10</acceptnum>             <!--num of accept event to set-->
+    <default_ip>127.0.0.1</default_ip>
+    <default_port>7777</default_port>    
+  <async_mode>1</async_mode>
+  <socket_alivetime>30000</socket_alivetime>
   </serverconfig>
+  
+  <database_configuration>
+    <redis_on>1</redis_on>
+    <SQL_on>1</SQL_on>
+  </database_configuration>  
+  
   
   <log>
     <enable>1</enable>
+    <loglevel>ALL</loglevel>              <!--loglevel:ALL->DEBUG-INFO-TRACE-->
   </log>
+  
 </tmtgx>

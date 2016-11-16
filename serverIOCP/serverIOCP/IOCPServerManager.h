@@ -35,6 +35,7 @@ namespace tmtgx {
 		static boost::mutex			m_mutex;
 		static IOCPServerManager*	m_iocpservermanager_ptr;
 		bool						m_worker_started;
+		bool						m_is_inited;
 
 	};
 }

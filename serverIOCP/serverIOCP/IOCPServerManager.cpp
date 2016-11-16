@@ -5,6 +5,7 @@ boost::mutex	   tmtgx::IOCPServerManager::m_mutex;
 tmtgx::IOCPServerManager* tmtgx::IOCPServerManager::m_iocpservermanager_ptr = NULL;
 tmtgx::IOCPServerManager::IOCPServerManager(void)
 {
+	m_is_inited		 = false;
 	m_worker_started = false;
 }
 
@@ -16,6 +17,11 @@ tmtgx::IOCPServerManager::~IOCPServerManager(void)
 bool tmtgx::IOCPServerManager::Initialize()
 {
 	// init iocp server work env and create iocp handle 
+	if(m_is_inited) {
+		return true;
+	}
+	m_is_inited = m_iocpserver.Initialize();	
+	return m_is_inited;
 }
 
 DWORD tmtgx::IOCPServerManager::GetCPUNum()
@@ -59,7 +65,7 @@ tmtgx::IOCPServerManager* tmtgx::IOCPServerManager::GetInstance()
 bool tmtgx::IOCPServerManager::CreateWorkerThreads()
 {
 	try {
-		for(int i = 0; i < 2*m_CPUnum; i++){
+		for(int i = 0; i < m_CPUnum; i++){
 			m_WorkerThreadVector.push_back(boost::shared_ptr<boost::thread>(new boost::thread(boost::bind(&m_iocpserver.LongTimeWorker),&m_iocpserver)));
 		}
 		return true;

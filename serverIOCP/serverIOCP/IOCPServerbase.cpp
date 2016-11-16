@@ -3,6 +3,58 @@
 #include <Windows.h>
 #include <boost/lexical_cast.hpp>
 
+namespace tmtgx {
+
+	CClientSocketPool::CClientSocketPool()
+	{
+		m_maxpoolsize = 0;
+		m_curpoolsize = 0;
+	}
+
+	CClientSocketPool::~CClientSocketPool()
+	{
+		while(m_socketpool.size()) {
+			m_socketpool.pop();
+		}
+	}
+
+	void CClientSocketPool::CreateClientSocketPool()
+	{
+		for (int i=0; i<m_maxpoolsize; ++i) {
+			SHARED_SOCKET client_socket(new (std::nothrow)SOCKET(socket(AF_INET, SOCK_STREAM, 0)));
+			if (NULL != client_socket) {
+				m_socketpool.push(client_socket);
+				m_curpoolsize ++;
+			}
+		}
+	}
+
+	BOOL CClientSocketPool::Push(SHARED_SOCKET m_clientsock_ptr)
+	{
+		boost::mutex::scoped_lock lock(m_mutex);
+		if (Isfull()) {
+			return false;
+		} else {
+			m_socketpool.push(m_clientsock_ptr);
+			m_curpoolsize ++;
+			return true;
+		}
+	}
+
+	CClientSocketPool::SHARED_SOCKET CClientSocketPool::Pop()
+	{
+		boost::mutex::scoped_lock lock(m_mutex);
+		if (Isempty()) {
+			return NULL;
+		} else {
+			SHARED_SOCKET sock_temp = m_socketpool.top();
+			m_socketpool.pop();
+			m_curpoolsize --;
+			return sock_temp;
+		}
+	}
+};
+
 namespace tmtgx{
 
 	CIOCPServerbase::CIOCPServerbase(void)
@@ -81,17 +133,12 @@ namespace tmtgx{
 
 	bool CIOCPServerbase::Initialize()
 	{
+		if(m_is_inited) {
+			return m_is_inited;
+		}
 		//init socket work environment
-		if(SocketEnvInitialize())
-		{
-			//add log for init sucess
-			m_is_inited = true;
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		m_is_inited = SocketEnvInitialize();
+		return m_is_inited;
 	}
 
 	void CIOCPServerbase::RecvDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data,_PER_IO_DATA &per_io_data)
@@ -103,9 +150,9 @@ namespace tmtgx{
 	{
 	}
 
-	void CIOCPServerbase::UnInitilize()
+	void CIOCPServerbase::UnInitialize()
 	{
 		WSACleanup();
 	}
-
+		
 }

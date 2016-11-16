@@ -13,6 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="tgx_IOCPServerWrapper">
+      <UniqueIdentifier>{c4463bc5-c3d6-4d44-99b7-a897a4d2063c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_HTTPProtcolWrapper">
+      <UniqueIdentifier>{8cb2cb4a-3cec-48f4-92c9-647aaf256069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_RedisWrapper">
+      <UniqueIdentifier>{7eb1d80f-3e68-4394-9965-346a59b9aa31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_SQLStorageWrapper">
+      <UniqueIdentifier>{5b79fda5-cd39-49d0-a562-3816f52eac44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_RotuerAlgorithmWrapper">
+      <UniqueIdentifier>{62025d88-04d4-419f-8b39-69d58f0ccbad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_HTTPContentContainerWrapper">
+      <UniqueIdentifier>{a512825a-4e6d-403f-8fc5-9c4c566e9672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_LogerWrapper">
+      <UniqueIdentifier>{79e12884-7567-4e14-9d3c-ae3686f011aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tgx_ConfigManager">
+      <UniqueIdentifier>{e0027b62-5829-4819-bf8a-99cb6cca9493}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,8 +48,14 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="IOCPServer.h">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClInclude>
     <ClInclude Include="IOCPServerbase.h">
-      <Filter>头文件</Filter>
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOCPServerManager.h">
+      <Filter>tgx_IOCPServerWrapper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -35,8 +65,19 @@
     <ClCompile Include="serverIOCP.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="IOCPServerbase.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="IOCPServer.cpp">
+      <Filter>tgx_IOCPServerWrapper</Filter>
     </ClCompile>
+    <ClCompile Include="IOCPServerbase.cpp">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="IOCPServerManager.cpp">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="tmtgxcfg.xml">
+      <Filter>tgx_ConfigManager</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

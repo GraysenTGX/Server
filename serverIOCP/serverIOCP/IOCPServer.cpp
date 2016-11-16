@@ -11,5 +11,9 @@ tmtgx::IOCPServer::~IOCPServer(void)
 {
 }
 
+void tmtgx::IOCPServer::LongTimeWorker()
+{
+
+}
 
 
