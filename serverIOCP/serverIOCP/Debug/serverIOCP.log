@@ -1,0 +1,214 @@
+﻿生成启动时间为 11/13/2016 10:52:19 PM。
+     1>项目“G:\git\Server\serverIOCP\serverIOCP\serverIOCP.vcxproj”在节点 2 上(Build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“G:\git\Server\serverIOCP\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\serverIOCP.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\serverIOCP.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\serverIOCP.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt IOCPServer.cpp IOCPServerbase.cpp IOCPServerManager.cpp serverIOCP.cpp
+         serverIOCP.cpp
+     1>g:\git\server\serveriocp\serveriocp\serveriocp.cpp(16): error C2039: “GetCPUNum”: 不是“tmtgx::CIOCPServerbase”的成员
+                 g:\git\server\serveriocp\serveriocp\iocpserverbase.h(66) : 参见“tmtgx::CIOCPServerbase”的声明
+     1>g:\git\server\serveriocp\serveriocp\serveriocp.cpp(18): error C2039: “CreateWorkerThreads”: 不是“tmtgx::CIOCPServerbase”的成员
+                 g:\git\server\serveriocp\serveriocp\iocpserverbase.h(66) : 参见“tmtgx::CIOCPServerbase”的声明
+     1>g:\git\server\serveriocp\serveriocp\serveriocp.cpp(22): error C2039: “getteststr”: 不是“tmtgx::CIOCPServerbase”的成员
+                 g:\git\server\serveriocp\serveriocp\iocpserverbase.h(66) : 参见“tmtgx::CIOCPServerbase”的声明
+         IOCPServerManager.cpp
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(67): warning C4018: “<”: 有符号/无符号不匹配
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2276: “&”: 绑定成员函数表达式上的非法操作
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<_bi::dm_result<MT::* ,A1>::type,boost::_mfi::dm<M,T>,_bi::list_av_1<A1>::type> boost::bind(M T::* ,A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2233) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf8<R,T,B1,B2,B3,B4,B5,B6,B7,B8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8) const,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 11 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(223) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf8<R,T,B1,B2,B3,B4,B5,B6,B7,B8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8),A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 11 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(212) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf7<R,T,B1,B2,B3,B4,B5,B6,B7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7) const,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(199) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf7<R,T,B1,B2,B3,B4,B5,B6,B7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7),A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(188) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf6<R,T,B1,B2,B3,B4,B5,B6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6) const,A1,A2,A3,A4,A5,A6,A7)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(175) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf6<R,T,B1,B2,B3,B4,B5,B6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5,B6),A1,A2,A3,A4,A5,A6,A7)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(164) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf5<R,T,B1,B2,B3,B4,B5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5) const,A1,A2,A3,A4,A5,A6)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(151) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf5<R,T,B1,B2,B3,B4,B5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4,B5),A1,A2,A3,A4,A5,A6)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(140) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf4<R,T,B1,B2,B3,B4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4) const,A1,A2,A3,A4,A5)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(127) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf4<R,T,B1,B2,B3,B4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3,B4),A1,A2,A3,A4,A5)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(116) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf3<R,T,B1,B2,B3>,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3) const,A1,A2,A3,A4)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(103) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf3<R,T,B1,B2,B3>,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2,B3),A1,A2,A3,A4)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(92) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf2<R,T,B1,B2>,_bi::list_av_3<A1,A2,A3>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2) const,A1,A2,A3)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(79) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf2<R,T,B1,B2>,_bi::list_av_3<A1,A2,A3>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1,B2),A1,A2,A3)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(68) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf1<R,T,B1>,_bi::list_av_2<A1,A2>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1) const,A1,A2)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(55) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf1<R,T,B1>,_bi::list_av_2<A1,A2>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(B1),A1,A2)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(44) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::cmf0<R,T>,_bi::list_av_1<A1>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(void) const,A1)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(31) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<Rt2,boost::_mfi::mf0<R,T>,_bi::list_av_1<A1>::type> boost::bind(boost::type<T>,R (__thiscall T::* )(void),A1)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf2_cc.hpp(21) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf8<R,T,B1,B2,B3,B4,B5,B6,B7,B8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8) const,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(436) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf8<R,T,B1,B2,B3,B4,B5,B6,B7,B8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8),A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(424) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf8<R,T,A1,A2,A3,A4,A5,A6,A7,A8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8) const,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(412) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf8<R,T,A1,A2,A3,A4,A5,A6,A7,A8>,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7,B8),A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(401) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf7<R,T,B1,B2,B3,B4,B5,B6,B7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7) const,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(388) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf7<R,T,B1,B2,B3,B4,B5,B6,B7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7),A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(376) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf7<R,T,A1,A2,A3,A4,A5,A6,A7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7) const,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(364) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf7<R,T,A1,A2,A3,A4,A5,A6,A7>,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6,B7),A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(353) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf6<R,T,B1,B2,B3,B4,B5,B6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6) const,A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(340) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf6<R,T,B1,B2,B3,B4,B5,B6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6),A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(328) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf6<R,T,A1,A2,A3,A4,A5,A6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6) const,A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(316) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf6<R,T,A1,A2,A3,A4,A5,A6>,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5,B6),A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(305) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf5<R,T,B1,B2,B3,B4,B5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5) const,A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(292) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf5<R,T,B1,B2,B3,B4,B5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5),A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(280) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf5<R,T,A1,A2,A3,A4,A5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5) const,A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(268) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf5<R,T,A1,A2,A3,A4,A5>,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4,B5),A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(257) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf4<R,T,B1,B2,B3,B4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4) const,A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(244) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf4<R,T,B1,B2,B3,B4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3,B4),A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(232) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf4<R,T,A1,A2,A3,A4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4) const,A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(220) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf4<R,T,A1,A2,A3,A4>,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3,B4),A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(209) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf3<R,T,B1,B2,B3>,_bi::list_av_4<A1,A2,A3,A4>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3) const,A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(196) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf3<R,T,B1,B2,B3>,_bi::list_av_4<A1,A2,A3,A4>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2,B3),A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(184) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf3<R,T,A1,A2,A3>,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3) const,A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(172) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf3<R,T,A1,A2,A3>,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(R (__thiscall T::* )(B1,B2,B3),A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(161) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf2<R,T,B1,B2>,_bi::list_av_3<A1,A2,A3>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2) const,A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(148) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf2<R,T,B1,B2>,_bi::list_av_3<A1,A2,A3>::type>>::type boost::bind(R (__thiscall T::* )(B1,B2),A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(136) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf2<R,T,A1,A2>,_bi::list_av_3<A1,A2,A3>::type> boost::bind(R (__thiscall T::* )(B1,B2) const,A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(124) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf2<R,T,A1,A2>,_bi::list_av_3<A1,A2,A3>::type> boost::bind(R (__thiscall T::* )(B1,B2),A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(113) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf1<R,T,B1>,_bi::list_av_2<A1,A2>::type>>::type boost::bind(R (__thiscall T::* )(B1) const,A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(100) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf1<R,T,B1>,_bi::list_av_2<A1,A2>::type>>::type boost::bind(R (__thiscall T::* )(B1),A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(88) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf1<R,T,A1>,_bi::list_av_2<A1,A2>::type> boost::bind(R (__thiscall T::* )(B1) const,A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(76) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf1<R,T,A1>,_bi::list_av_2<A1,A2>::type> boost::bind(R (__thiscall T::* )(B1),A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(65) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::cmf0<R,T>,_bi::list_av_1<A1>::type>>::type boost::bind(R (__thiscall T::* )(void) const,A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(52) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::enable_if_c<!boost::core::is_same<T1,T2>::value,boost::_bi::bind_t<Rt2,boost::_mfi::mf0<R,T>,_bi::list_av_1<A1>::type>>::type boost::bind(R (__thiscall T::* )(void),A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(41) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::cmf0<R,T>,_bi::list_av_1<A1>::type> boost::bind(R (__thiscall T::* )(void) const,A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(30) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,boost::_mfi::mf0<R,T>,_bi::list_av_1<A1>::type> boost::bind(R (__thiscall T::* )(void),A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_mf_cc.hpp(20) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4,B5,B6,B7,B8,B9),_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4,B5,B6,B7,B8,B9),A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(112) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4,B5,B6,B7,B8),_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4,B5,B6,B7,B8),A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(101) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4,B5,B6,B7),_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4,B5,B6,B7),A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(90) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4,B5,B6),_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4,B5,B6),A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(79) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4,B5),_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4,B5),A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(68) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3,B4),_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(R (__cdecl *)(B1,B2,B3,B4),A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(57) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2,B3),_bi::list_av_3<A1,A2,A3>::type> boost::bind(R (__cdecl *)(B1,B2,B3),A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(46) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1,B2),_bi::list_av_2<A1,A2>::type> boost::bind(R (__cdecl *)(B1,B2),A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(35) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,R(__cdecl *)(B1),_bi::list_av_1<A1>::type> boost::bind(R (__cdecl *)(B1),A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind_cc.hpp(26) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2041) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2033) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2025) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(F,A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2017) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(F,A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2009) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(F,A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(2001) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_3<A1,A2,A3>::type> boost::bind(F,A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1993) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_2<A1,A2>::type> boost::bind(F,A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1985) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<boost::_bi::unspecified,F,_bi::list_av_1<A1>::type> boost::bind(F,A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1977) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 11 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1957) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1949) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4,A5,A6,A7)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1941) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4,A5,A6)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1933) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4,A5)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1925) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(boost::type<T>,F,A1,A2,A3,A4)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1917) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_3<A1,A2,A3>::type> boost::bind(boost::type<T>,F,A1,A2,A3)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1909) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_2<A1,A2>::type> boost::bind(boost::type<T>,F,A1,A2)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1901) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_1<A1>::type> boost::bind(boost::type<T>,F,A1)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1893) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,boost::_bi::list0> boost::bind(boost::type<T>,F)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1885) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_9<A1,A2,A3,A4,A5,A6,A7,A8,A9>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7,A8,A9)”: 应输入 10 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1875) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_8<A1,A2,A3,A4,A5,A6,A7,A8>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7,A8)”: 应输入 9 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1867) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_7<A1,A2,A3,A4,A5,A6,A7>::type> boost::bind(F,A1,A2,A3,A4,A5,A6,A7)”: 应输入 8 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1859) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_6<A1,A2,A3,A4,A5,A6>::type> boost::bind(F,A1,A2,A3,A4,A5,A6)”: 应输入 7 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1851) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_5<A1,A2,A3,A4,A5>::type> boost::bind(F,A1,A2,A3,A4,A5)”: 应输入 6 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1843) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_4<A1,A2,A3,A4>::type> boost::bind(F,A1,A2,A3,A4)”: 应输入 5 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1835) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_3<A1,A2,A3>::type> boost::bind(F,A1,A2,A3)”: 应输入 4 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1827) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_2<A1,A2>::type> boost::bind(F,A1,A2)”: 应输入 3 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1819) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2780: “boost::_bi::bind_t<R,F,_bi::list_av_1<A1>::type> boost::bind(F,A1)”: 应输入 2 个参数，却提供了 1 个
+                 g:\vs2012\boost_1_61_0\boost_1_61_0\boost\bind\bind.hpp(1811) : 参见“boost::bind”的声明
+     1>g:\git\server\serveriocp\serveriocp\iocpservermanager.cpp(68): error C2661: “boost::thread::thread”: 没有重载函数接受 2 个参数
+         IOCPServerbase.cpp
+     1>g:\git\server\serveriocp\serveriocp\iocpserverbase.cpp(87): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+         IOCPServer.cpp
+         正在生成代码...
+     1>已完成生成项目“G:\git\Server\serverIOCP\serverIOCP\serverIOCP.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:36.94
