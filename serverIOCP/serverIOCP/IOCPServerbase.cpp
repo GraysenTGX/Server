@@ -3,58 +3,6 @@
 #include <Windows.h>
 #include <boost/lexical_cast.hpp>
 
-namespace tmtgx {
-
-	CClientSocketPool::CClientSocketPool()
-	{
-		m_maxpoolsize = 0;
-		m_curpoolsize = 0;
-	}
-
-	CClientSocketPool::~CClientSocketPool()
-	{
-		while(m_socketpool.size()) {
-			m_socketpool.pop();
-		}
-	}
-
-	void CClientSocketPool::CreateClientSocketPool()
-	{
-		for (int i=0; i<m_maxpoolsize; ++i) {
-			SHARED_SOCKET client_socket(new (std::nothrow)SOCKET(socket(AF_INET, SOCK_STREAM, 0)));
-			if (NULL != client_socket) {
-				m_socketpool.push(client_socket);
-				m_curpoolsize ++;
-			}
-		}
-	}
-
-	BOOL CClientSocketPool::Push(SHARED_SOCKET m_clientsock_ptr)
-	{
-		boost::mutex::scoped_lock lock(m_mutex);
-		if (Isfull()) {
-			return false;
-		} else {
-			m_socketpool.push(m_clientsock_ptr);
-			m_curpoolsize ++;
-			return true;
-		}
-	}
-
-	CClientSocketPool::SHARED_SOCKET CClientSocketPool::Pop()
-	{
-		boost::mutex::scoped_lock lock(m_mutex);
-		if (Isempty()) {
-			return NULL;
-		} else {
-			SHARED_SOCKET sock_temp = m_socketpool.top();
-			m_socketpool.pop();
-			m_curpoolsize --;
-			return sock_temp;
-		}
-	}
-};
-
 namespace tmtgx{
 
 	CIOCPServerbase::CIOCPServerbase(void)
@@ -123,11 +71,13 @@ namespace tmtgx{
 		return true;
 	}
 	
-	BOOL CIOCPServerbase::Associate2CompletionHandle(HANDLE &completionPort, 
-														HANDLE &newDevice, 
-														DWORD &hCmpletionKey)
+	BOOL CIOCPServerbase::Associate2CompletionHandle(HANDLE completionPort
+													,boost::shared_ptr<_PER_SOCKET_HANDLE_DATA> per_socket_data)
 	{
-		return true;
+		if (NULL == per_socket_data) {
+			return false;
+		}
+		return NULL == CreateIoCompletionPort((HANDLE)per_socket_data->m_cursocket, completionPort, (ULONG_PTR)(*per_socket_data) , 0) ? false : true;
 	}
 
 
@@ -141,12 +91,12 @@ namespace tmtgx{
 		return m_is_inited;
 	}
 
-	void CIOCPServerbase::RecvDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data,_PER_IO_DATA &per_io_data)
+	void CIOCPServerbase::RecvDataProc(boost::shared_ptr<_PER_SOCKET_HANDLE_DATA> per_handle_data,boost::shared_ptr<_PER_IO_DATA> per_io_data)
 	{
 
 	}
 
-	void CIOCPServerbase::SendDataProc(_PER_SOCKET_HANDLE_DATA &per_handle_data,_PER_IO_DATA &per_io_data)
+	void CIOCPServerbase::SendDataProc(boost::shared_ptr<_PER_SOCKET_HANDLE_DATA> per_handle_data,boost::shared_ptr<_PER_IO_DATA> per_io_data)
 	{
 	}
 
@@ -155,4 +105,39 @@ namespace tmtgx{
 		WSACleanup();
 	}
 		
+	BOOL CIOCPServerbase::PostAcceptEvent2IOCPHandle(boost::shared_ptr<tmtgx::_PER_IO_DATA> per_io_data)
+	{
+		if (NULL == per_io_data || NULL == m_AcceptEXAddress) {
+			return false;
+		} else {
+			return FALSE == m_AcceptEXAddress(m_ListenSocket, per_io_data->m_socket, per_io_data->m_wsabuf.buf, 
+				per_io_data->m_wsabuf.len - (sizeof(SOCKADDR_IN)+16)*2, sizeof(SOCKADDR_IN)+16, sizeof(SOCKADDR_IN)+16,
+				&per_io_data->m_recvlen, &per_io_data->m_poverlap) ? true : false;
+		}
+	}
+
+	BOOL CIOCPServerbase::PostRecvEvent2IOCPHandle(boost::shared_ptr<tmtgx::_PER_IO_DATA> per_io_data)
+	{
+		if (NULL == per_io_data) {
+			return false;
+		} else {
+			if (INVALID_SOCKET != per_io_data->m_socket) {
+				DWORD flags = 0UL;
+				::WSARecv(per_io_data->m_socket, &per_io_data->m_wsabuf, 1,	&per_io_data->m_recvlen, &flags,
+					&per_io_data->m_poverlap, NULL);
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	BOOL CIOCPServerbase::PostSendEvent2IOCPHandle(boost::shared_ptr<tmtgx::_PER_IO_DATA> per_io_data)
+	{
+		if (NULL == per_io_data) {
+			return false;
+		} else {
+			// we do not need the send event complete inform ,so 
+		}
+	}
 }

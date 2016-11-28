@@ -57,6 +57,15 @@
     <ClInclude Include="IOCPServerManager.h">
       <Filter>tgx_IOCPServerWrapper</Filter>
     </ClInclude>
+    <ClInclude Include="MemoryPool.h">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="PerSocketEvent.h">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="PerIOEvent.h">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +81,9 @@
       <Filter>tgx_IOCPServerWrapper</Filter>
     </ClCompile>
     <ClCompile Include="IOCPServerManager.cpp">
+      <Filter>tgx_IOCPServerWrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryPool.cpp">
       <Filter>tgx_IOCPServerWrapper</Filter>
     </ClCompile>
   </ItemGroup>

@@ -82,16 +82,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cfgreader.h" />
     <ClInclude Include="IOCPServer.h" />
     <ClInclude Include="IOCPServerbase.h" />
     <ClInclude Include="IOCPServerManager.h" />
+    <ClInclude Include="MemoryPool.h" />
+    <ClInclude Include="PerIOEvent.h" />
+    <ClInclude Include="PerSocketEvent.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cfgreader.cpp" />
     <ClCompile Include="IOCPServer.cpp" />
     <ClCompile Include="IOCPServerbase.cpp" />
     <ClCompile Include="IOCPServerManager.cpp" />
+    <ClCompile Include="MemoryPool.cpp" />
     <ClCompile Include="serverIOCP.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

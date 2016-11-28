@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tmtgx>
+  <IOCP>
+    <!--num of accept event to set-->
+    <acceptnum>10</acceptnum>
+  </IOCP>
   
   <serverconfig>
     <TCP>1</TCP>                          <!--use tcp mode for transfer traffic-->
     <UDP>0</UDP>                          <!--use udp mode for transfer traffix-->
-    <acceptnum>10</acceptnum>             <!--num of accept event to set-->
     <default_ip>127.0.0.1</default_ip>
     <default_port>7777</default_port>    
-  <async_mode>1</async_mode>
-  <socket_alivetime>30000</socket_alivetime>
+    <async_mode>1</async_mode>
+    <longconnectenable>1</longconnectenable> <!-- long connect is for TCP Server like game server-->
   </serverconfig>
   
   <database_configuration>
